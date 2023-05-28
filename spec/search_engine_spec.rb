@@ -18,11 +18,11 @@ describe SearchEngine do
         end
     
         it 'returns matched pages for a query ("content")' do
-        #   expect { search_engine.search('content') }.to output("Search results for 'content': https://example.com/page3").to_stdout
+            expect { search_engine.search('content') }.to output("Search Results for 'content'\n- https://example.com/page3\n").to_stdout
         end
     
         it 'returns no results for a non-matching query' do
-        #   expect { search_engine.search('nonexistent') }.to output("No results found for 'nonexistent'").to_stdout
+            expect { search_engine.search('nonexistent') }.to output("No results found for 'nonexistent'").to_stdout
         end
       end
 end
